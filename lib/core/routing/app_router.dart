@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:media_chat/core/routing/routes.dart';
 import 'package:media_chat/feature/home/view/home_screen.dart';
+import 'package:media_chat/feature/search/view/search_screen.dart';
 import 'package:media_chat/feature/url/view/url_screen.dart';
+import 'package:media_chat/feature/video/widgets/video_screen.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -16,7 +17,14 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => UrlScreen(),
         );
-
+      case Routes.questionSearch:
+        return MaterialPageRoute(
+          builder: (_) => QuestionSearchScreen(),
+        );
+      case Routes.videoScreen:
+        return MaterialPageRoute(
+          builder: (_) => VideoDropArea(),
+        );
       default:
         return null;
     }

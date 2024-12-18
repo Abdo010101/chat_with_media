@@ -73,6 +73,7 @@ class UrlScreen extends StatelessWidget {
                   const SizedBox(
                     height: 80,
                   ),
+                  const Spacer(),
                   AppButton(
                     onPressed: () {
                       if (formKey.currentState!.validate()) {

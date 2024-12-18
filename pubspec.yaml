@@ -49,6 +49,17 @@ dependencies:
   retrofit: ^4.4.1
   pretty_dio_logger: ^1.4.0
   get_it: ^8.0.2
+  image_picker: ^1.1.2
+  video_player: ^2.9.2
+  chewie: ^1.8.5
+  file_picker: ^8.1.4
+ 
+  retrofit_generator: ^9.1.2
+
+
+  json_annotation: ^4.9.0
+  shimmer: ^3.0.0
+
 
 
 dev_dependencies:

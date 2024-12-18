@@ -34,7 +34,9 @@ class PublicText extends StatelessWidget {
           maxLines: maxLines ?? 100,
           overflow: textOverflow,
           style: textTheme?.copyWith(
-              color: color ?? Colors.black, fontWeight: fontWeight,fontFamily: 'Almarai')),
+              color: color ?? Colors.black,
+              fontWeight: fontWeight,
+              fontFamily: 'Almarai')),
     );
   }
 }

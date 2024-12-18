@@ -33,27 +33,37 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: ColorsManager.videoColor,
-                    borderRadius: BorderRadius.circular(20)),
-                alignment: Alignment.center,
-                constraints: BoxConstraints.tight(const Size(200, 180)),
-                child:
-                    Text('Videoes', style: TextStyles.font14LightGrayRegular),
+              GestureDetector(
+                onTap: () {
+                  context.pushNamed(Routes.videoScreen);
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: ColorsManager.videoColor,
+                      borderRadius: BorderRadius.circular(20)),
+                  alignment: Alignment.center,
+                  constraints: BoxConstraints.tight(const Size(200, 180)),
+                  child:
+                      Text('Videoes', style: TextStyles.font14LightGrayRegular),
+                ),
               ),
               const SizedBox(
                 height: 20,
               ),
-              Container(
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    color: ColorsManager.searchColor,
-                    borderRadius: BorderRadius.circular(20)),
-                constraints: BoxConstraints.tight(const Size(200, 180)),
-                child: Text(
-                  'Search',
-                  style: TextStyles.font14LightGrayRegular,
+              InkWell(
+                onTap: () {
+                  context.pushNamed(Routes.questionSearch);
+                },
+                child: Container(
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      color: ColorsManager.searchColor,
+                      borderRadius: BorderRadius.circular(20)),
+                  constraints: BoxConstraints.tight(const Size(200, 180)),
+                  child: Text(
+                    'Search',
+                    style: TextStyles.font14LightGrayRegular,
+                  ),
                 ),
               ),
             ],

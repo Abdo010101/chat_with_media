@@ -1,7 +1,10 @@
 class ApiConstant {
   // static const String apiBaseUrl = "http://192.168.1.37:8000/api/";
 
-  static const String apiBaseUrl = "https://luxadmin.atwdemo.com/api/";
+  static const String apiBaseUrl = "https://ml-test.atwdemo.com/";
+
+  static const String search = "search";
+  static const String localVideo = "local_video";
 }
 
 ///***********  This Strings for  Error Messages ****************************** */

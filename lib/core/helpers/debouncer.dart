@@ -7,7 +7,6 @@ class Debouncer {
 
   VoidCallback? _action;
   Timer? _timer;
-  
 
   void call(VoidCallback action) {
     // Let the latest action override whatever was there before
