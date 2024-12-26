@@ -7,7 +7,6 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:media_chat/feature/video/data/models/video_reponse.dart';
-import 'package:media_chat/feature/video/data/models/video_request_body.dart';
 import 'package:media_chat/feature/video/data/repo/video_repo.dart';
 import 'package:media_chat/feature/video/logic/vido_state.dart';
 import 'package:video_player/video_player.dart';

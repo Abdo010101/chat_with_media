@@ -25,7 +25,7 @@ class UrlScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ArrowBack(
+                  GradientBorderWidget(
                     onTap: () {
                       context.pop();
                     },

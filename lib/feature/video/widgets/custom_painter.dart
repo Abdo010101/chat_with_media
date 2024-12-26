@@ -1,67 +1,47 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:dotted_border/dotted_border.dart';
 
-class DashedBorderPainter extends CustomPainter {
-  final Paint _paint;
-  final double dashWidth = 8.0; // Width of the dash
-  final double dashSpace = 10.0; // Space between the dashes
-
-  DashedBorderPainter()
-      : _paint = Paint()
-          ..color = Colors.grey
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 3;
-
+class GradientDashedBorder extends StatelessWidget {
   @override
-  void paint(Canvas canvas, Size size) {
-    double distance = 0.0;
-    while (distance < size.width) {
-      // Draw dashes horizontally
-      canvas.drawLine(
-        Offset(distance, 0),
-        Offset(distance + dashWidth, 0),
-        _paint,
-      );
-      distance += dashWidth + dashSpace;
-    }
-
-    distance = 0.0;
-    while (distance < size.height) {
-      // Draw dashes vertically
-      canvas.drawLine(
-        Offset(0, distance),
-        Offset(0, distance + dashWidth),
-        _paint,
-      );
-      distance += dashWidth + dashSpace;
-    }
-
-    distance = 0.0;
-    while (distance < size.width) {
-      // Draw dashes on the bottom horizontally
-      canvas.drawLine(
-        Offset(distance, size.height),
-        Offset(distance + dashWidth, size.height),
-        _paint,
-      );
-      distance += dashWidth + dashSpace;
-    }
-
-    distance = 0.0;
-    while (distance < size.height) {
-      // Draw dashes on the right vertically
-      canvas.drawLine(
-        Offset(size.width, distance),
-        Offset(size.width, distance + dashWidth),
-        _paint,
-      );
-      distance += dashWidth + dashSpace;
-    }
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return false;
+  Widget build(BuildContext context) {
+    return Center(
+      child: DottedBorder(
+        borderType: BorderType.RRect,
+        radius: Radius.circular(15),
+        dashPattern: [8, 10], // Dash width and space between dashes
+        strokeWidth: 3,
+        color: Colors.transparent, // Set to transparent to apply gradient
+        customPath: (size) {
+          // Create a path for the border
+          return Path()
+            ..addRRect(RRect.fromRectAndRadius(
+              Rect.fromLTWH(0, 0, size.width, size.height),
+              Radius.circular(15),
+            ));
+        },
+        child: Container(
+          width: 200,
+          height: 100,
+          decoration: BoxDecoration(
+            gradient: RadialGradient(
+              center: Alignment(0.49, 0.50),
+              radius: 0.39,
+              colors: [
+                Color(0xFF00804C),
+                Colors.blue,
+              ],
+            ),
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: Center(
+            child: Text(
+              'Dashed Border with Gradient',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

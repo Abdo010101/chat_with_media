@@ -10,10 +10,13 @@ class SearchState with _$SearchState {
   const factory SearchState.initial() = Initial;
 
   const factory SearchState.searchLoading() = SearchLoading;
-
   const factory SearchState.searchSuccess(SearchResponse response) =
       SearchSuccess;
-
   const factory SearchState.searchError(ApiErrorModel apiErrorModel) =
       SearchError;
+
+  const factory SearchState.changeTextFormFieldBasedOnVoiceLoading() =
+      ChangeTextFormFieldBasedOnVoiceLoading;
+  const factory SearchState.changeTextFormFieldBasedOnVoiceSuccess() =
+      ChangeTextFormFieldBasedOnVoiceSuccess;
 }

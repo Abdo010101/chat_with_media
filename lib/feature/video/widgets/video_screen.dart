@@ -1,5 +1,7 @@
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:media_chat/core/di/dependency_injection.dart';
 import 'package:media_chat/core/helpers/extention.dart';
 import 'package:media_chat/core/theming/colors.dart';
@@ -32,37 +34,54 @@ class _VideoDropAreaState extends State<VideoDropArea> {
     return BlocProvider(
       create: (context) => getIt.get<VidoCubit>(),
       child: Scaffold(
-        backgroundColor: ColorsManager.backgroundScaffodl,
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 30),
-            child: BlocBuilder<VidoCubit, VidoState>(
-              builder: (context, state) {
-                return Form(
-                  key: context.read<VidoCubit>().formKey,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ArrowBack(
-                        onTap: () => context.pop(),
-                      ),
-                      const SizedBox(
-                        height: 40,
-                      ),
-                      _buildVideoPicker(context),
-                      const SizedBox(
-                        height: 40,
-                      ),
-                      _buildTextFormField(context),
-                      const Spacer(),
-                      _buildAskMeButton(context, state),
-                      BlocListnerWidget(),
-                    ],
+        backgroundColor: ColorsManager.colorBlack,
+        body: Stack(
+          children: [
+            // Positioned(
+            //     left: 0,
+            //     right: 0,
+            //     top: 100,
+            //     child: Image.asset(
+            //       'assets/images/Ellipse 14.png',
+            //       fit: BoxFit.scaleDown,
+            //     )),
+            SizedBox(
+              width: double.infinity,
+              height: double.infinity,
+              child: SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 25.0, vertical: 30),
+                  child: BlocBuilder<VidoCubit, VidoState>(
+                    builder: (context, state) {
+                      return Form(
+                        key: context.read<VidoCubit>().formKey,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GradientBorderWidget(
+                              onTap: () => context.pop(),
+                            ),
+                            const SizedBox(
+                              height: 40,
+                            ),
+                            _buildVideoPicker(context),
+                            const SizedBox(
+                              height: 40,
+                            ),
+                            _buildTextFormField(context),
+                            const Spacer(),
+                            _buildAskMeButton(context, state),
+                            BlocListnerWidget(),
+                          ],
+                        ),
+                      );
+                    },
                   ),
-                );
-              },
+                ),
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );
@@ -74,13 +93,24 @@ class _VideoDropAreaState extends State<VideoDropArea> {
       child: Center(
         child: Container(
           constraints: BoxConstraints.tight(const Size(350, 250)),
-          child: CustomPaint(
-            painter: DashedBorderPainter(),
-            child: Center(
-              child: context.read<VidoCubit>().pickedVideoPath == null
-                  ? _buildPlaceholder(context)
-                  : _buildVideoPlayer(context),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            border: const GradientBoxBorder(
+              gradient: RadialGradient(
+                center: Alignment(0.49, 0.50),
+                radius: 0.39,
+                colors: [
+                  Color(0xFF00804C),
+                  Colors.blue,
+                ],
+              ),
+              width: 3, // Adjust the border width as needed
             ),
+          ),
+          child: Center(
+            child: context.read<VidoCubit>().pickedVideoPath == null
+                ? _buildPlaceholder(context)
+                : _buildVideoPlayer(context),
           ),
         ),
       ),
@@ -94,7 +124,7 @@ class _VideoDropAreaState extends State<VideoDropArea> {
         Icon(
           Icons.video_library,
           size: 50,
-          color: Colors.blue,
+          color: const Color(0x6600804C),
         ),
         SizedBox(height: 10),
         Text(
@@ -170,7 +200,7 @@ class _VideoDropAreaState extends State<VideoDropArea> {
       height: 60,
       padding: const EdgeInsets.symmetric(horizontal: 25),
       myText: state is AskVideoApiLoading ? 'LOADING......' : 'Ask Me',
-      backGroundColor: Colors.blue,
+      backGroundColor: const Color(0x6600804C),
       iconPath: '',
     );
   }

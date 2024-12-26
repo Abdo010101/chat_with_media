@@ -40,7 +40,7 @@ class MainApp extends StatelessWidget {
                     fontSize: 20,
                     fontWeight: FontWeight.w500)),
           ),
-          initialRoute: Routes.homeScreen,
+          initialRoute: Routes.questionSearch,
           onGenerateRoute: appRouter.generateRoute,
         );
       },

@@ -22,6 +22,8 @@ mixin _$SearchState {
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +32,8 @@ mixin _$SearchState {
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +42,8 @@ mixin _$SearchState {
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +53,10 @@ mixin _$SearchState {
     required TResult Function(SearchLoading value) searchLoading,
     required TResult Function(SearchSuccess value) searchSuccess,
     required TResult Function(SearchError value) searchError,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
+        changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
+        changeTextFormFieldBasedOnVoiceSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +65,10 @@ mixin _$SearchState {
     TResult? Function(SearchLoading value)? searchLoading,
     TResult? Function(SearchSuccess value)? searchSuccess,
     TResult? Function(SearchError value)? searchError,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +77,10 @@ mixin _$SearchState {
     TResult Function(SearchLoading value)? searchLoading,
     TResult Function(SearchSuccess value)? searchSuccess,
     TResult Function(SearchError value)? searchError,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -140,6 +158,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return initial();
   }
@@ -151,6 +171,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return initial?.call();
   }
@@ -162,6 +184,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -177,6 +201,10 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     required TResult Function(SearchLoading value) searchLoading,
     required TResult Function(SearchSuccess value) searchSuccess,
     required TResult Function(SearchError value) searchError,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
+        changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
+        changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return initial(this);
   }
@@ -188,6 +216,10 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     TResult? Function(SearchLoading value)? searchLoading,
     TResult? Function(SearchSuccess value)? searchSuccess,
     TResult? Function(SearchError value)? searchError,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return initial?.call(this);
   }
@@ -199,6 +231,10 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     TResult Function(SearchLoading value)? searchLoading,
     TResult Function(SearchSuccess value)? searchSuccess,
     TResult Function(SearchError value)? searchError,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -265,6 +301,8 @@ class _$SearchLoadingImpl
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return searchLoading();
   }
@@ -276,6 +314,8 @@ class _$SearchLoadingImpl
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return searchLoading?.call();
   }
@@ -287,6 +327,8 @@ class _$SearchLoadingImpl
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
   }) {
     if (searchLoading != null) {
@@ -302,6 +344,10 @@ class _$SearchLoadingImpl
     required TResult Function(SearchLoading value) searchLoading,
     required TResult Function(SearchSuccess value) searchSuccess,
     required TResult Function(SearchError value) searchError,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
+        changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
+        changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return searchLoading(this);
   }
@@ -313,6 +359,10 @@ class _$SearchLoadingImpl
     TResult? Function(SearchLoading value)? searchLoading,
     TResult? Function(SearchSuccess value)? searchSuccess,
     TResult? Function(SearchError value)? searchError,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return searchLoading?.call(this);
   }
@@ -324,6 +374,10 @@ class _$SearchLoadingImpl
     TResult Function(SearchLoading value)? searchLoading,
     TResult Function(SearchSuccess value)? searchSuccess,
     TResult Function(SearchError value)? searchError,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
   }) {
     if (searchLoading != null) {
@@ -420,6 +474,8 @@ class _$SearchSuccessImpl
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return searchSuccess(response);
   }
@@ -431,6 +487,8 @@ class _$SearchSuccessImpl
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return searchSuccess?.call(response);
   }
@@ -442,6 +500,8 @@ class _$SearchSuccessImpl
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
   }) {
     if (searchSuccess != null) {
@@ -457,6 +517,10 @@ class _$SearchSuccessImpl
     required TResult Function(SearchLoading value) searchLoading,
     required TResult Function(SearchSuccess value) searchSuccess,
     required TResult Function(SearchError value) searchError,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
+        changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
+        changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return searchSuccess(this);
   }
@@ -468,6 +532,10 @@ class _$SearchSuccessImpl
     TResult? Function(SearchLoading value)? searchLoading,
     TResult? Function(SearchSuccess value)? searchSuccess,
     TResult? Function(SearchError value)? searchError,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return searchSuccess?.call(this);
   }
@@ -479,6 +547,10 @@ class _$SearchSuccessImpl
     TResult Function(SearchLoading value)? searchLoading,
     TResult Function(SearchSuccess value)? searchSuccess,
     TResult Function(SearchError value)? searchError,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
   }) {
     if (searchSuccess != null) {
@@ -582,6 +654,8 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return searchError(apiErrorModel);
   }
@@ -593,6 +667,8 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return searchError?.call(apiErrorModel);
   }
@@ -604,6 +680,8 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
   }) {
     if (searchError != null) {
@@ -619,6 +697,10 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     required TResult Function(SearchLoading value) searchLoading,
     required TResult Function(SearchSuccess value) searchSuccess,
     required TResult Function(SearchError value) searchError,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
+        changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
+        changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return searchError(this);
   }
@@ -630,6 +712,10 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     TResult? Function(SearchLoading value)? searchLoading,
     TResult? Function(SearchSuccess value)? searchSuccess,
     TResult? Function(SearchError value)? searchError,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
   }) {
     return searchError?.call(this);
   }
@@ -641,6 +727,10 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     TResult Function(SearchLoading value)? searchLoading,
     TResult Function(SearchSuccess value)? searchSuccess,
     TResult Function(SearchError value)? searchError,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
   }) {
     if (searchError != null) {
@@ -661,4 +751,302 @@ abstract class SearchError implements SearchState {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchErrorImplCopyWith<_$SearchErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ChangeTextFormFieldBasedOnVoiceLoadingImplCopyWith<$Res> {
+  factory _$$ChangeTextFormFieldBasedOnVoiceLoadingImplCopyWith(
+          _$ChangeTextFormFieldBasedOnVoiceLoadingImpl value,
+          $Res Function(_$ChangeTextFormFieldBasedOnVoiceLoadingImpl) then) =
+      __$$ChangeTextFormFieldBasedOnVoiceLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ChangeTextFormFieldBasedOnVoiceLoadingImplCopyWithImpl<$Res>
+    extends _$SearchStateCopyWithImpl<$Res,
+        _$ChangeTextFormFieldBasedOnVoiceLoadingImpl>
+    implements _$$ChangeTextFormFieldBasedOnVoiceLoadingImplCopyWith<$Res> {
+  __$$ChangeTextFormFieldBasedOnVoiceLoadingImplCopyWithImpl(
+      _$ChangeTextFormFieldBasedOnVoiceLoadingImpl _value,
+      $Res Function(_$ChangeTextFormFieldBasedOnVoiceLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SearchState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ChangeTextFormFieldBasedOnVoiceLoadingImpl
+    with DiagnosticableTreeMixin
+    implements ChangeTextFormFieldBasedOnVoiceLoading {
+  const _$ChangeTextFormFieldBasedOnVoiceLoadingImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SearchState.changeTextFormFieldBasedOnVoiceLoading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'SearchState.changeTextFormFieldBasedOnVoiceLoading'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeTextFormFieldBasedOnVoiceLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() searchLoading,
+    required TResult Function(SearchResponse response) searchSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return changeTextFormFieldBasedOnVoiceLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? searchLoading,
+    TResult? Function(SearchResponse response)? searchSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return changeTextFormFieldBasedOnVoiceLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? searchLoading,
+    TResult Function(SearchResponse response)? searchSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
+    required TResult orElse(),
+  }) {
+    if (changeTextFormFieldBasedOnVoiceLoading != null) {
+      return changeTextFormFieldBasedOnVoiceLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(SearchLoading value) searchLoading,
+    required TResult Function(SearchSuccess value) searchSuccess,
+    required TResult Function(SearchError value) searchError,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
+        changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
+        changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return changeTextFormFieldBasedOnVoiceLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(SearchLoading value)? searchLoading,
+    TResult? Function(SearchSuccess value)? searchSuccess,
+    TResult? Function(SearchError value)? searchError,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return changeTextFormFieldBasedOnVoiceLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(SearchLoading value)? searchLoading,
+    TResult Function(SearchSuccess value)? searchSuccess,
+    TResult Function(SearchError value)? searchError,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
+    required TResult orElse(),
+  }) {
+    if (changeTextFormFieldBasedOnVoiceLoading != null) {
+      return changeTextFormFieldBasedOnVoiceLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeTextFormFieldBasedOnVoiceLoading implements SearchState {
+  const factory ChangeTextFormFieldBasedOnVoiceLoading() =
+      _$ChangeTextFormFieldBasedOnVoiceLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$ChangeTextFormFieldBasedOnVoiceSuccessImplCopyWith<$Res> {
+  factory _$$ChangeTextFormFieldBasedOnVoiceSuccessImplCopyWith(
+          _$ChangeTextFormFieldBasedOnVoiceSuccessImpl value,
+          $Res Function(_$ChangeTextFormFieldBasedOnVoiceSuccessImpl) then) =
+      __$$ChangeTextFormFieldBasedOnVoiceSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ChangeTextFormFieldBasedOnVoiceSuccessImplCopyWithImpl<$Res>
+    extends _$SearchStateCopyWithImpl<$Res,
+        _$ChangeTextFormFieldBasedOnVoiceSuccessImpl>
+    implements _$$ChangeTextFormFieldBasedOnVoiceSuccessImplCopyWith<$Res> {
+  __$$ChangeTextFormFieldBasedOnVoiceSuccessImplCopyWithImpl(
+      _$ChangeTextFormFieldBasedOnVoiceSuccessImpl _value,
+      $Res Function(_$ChangeTextFormFieldBasedOnVoiceSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SearchState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ChangeTextFormFieldBasedOnVoiceSuccessImpl
+    with DiagnosticableTreeMixin
+    implements ChangeTextFormFieldBasedOnVoiceSuccess {
+  const _$ChangeTextFormFieldBasedOnVoiceSuccessImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SearchState.changeTextFormFieldBasedOnVoiceSuccess()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'SearchState.changeTextFormFieldBasedOnVoiceSuccess'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeTextFormFieldBasedOnVoiceSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() searchLoading,
+    required TResult Function(SearchResponse response) searchSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return changeTextFormFieldBasedOnVoiceSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? searchLoading,
+    TResult? Function(SearchResponse response)? searchSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return changeTextFormFieldBasedOnVoiceSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? searchLoading,
+    TResult Function(SearchResponse response)? searchSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
+    required TResult orElse(),
+  }) {
+    if (changeTextFormFieldBasedOnVoiceSuccess != null) {
+      return changeTextFormFieldBasedOnVoiceSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(SearchLoading value) searchLoading,
+    required TResult Function(SearchSuccess value) searchSuccess,
+    required TResult Function(SearchError value) searchError,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
+        changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
+        changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return changeTextFormFieldBasedOnVoiceSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(SearchLoading value)? searchLoading,
+    TResult? Function(SearchSuccess value)? searchSuccess,
+    TResult? Function(SearchError value)? searchError,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return changeTextFormFieldBasedOnVoiceSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(SearchLoading value)? searchLoading,
+    TResult Function(SearchSuccess value)? searchSuccess,
+    TResult Function(SearchError value)? searchError,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
+    required TResult orElse(),
+  }) {
+    if (changeTextFormFieldBasedOnVoiceSuccess != null) {
+      return changeTextFormFieldBasedOnVoiceSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeTextFormFieldBasedOnVoiceSuccess implements SearchState {
+  const factory ChangeTextFormFieldBasedOnVoiceSuccess() =
+      _$ChangeTextFormFieldBasedOnVoiceSuccessImpl;
 }

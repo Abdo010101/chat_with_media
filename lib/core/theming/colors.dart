@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class ColorsManager {
   static Color backgroundScaffodl = Color(0xFFf8f9f9);
+  static Color colorBlack = Color(0xFF141414);
+
   static Color urlColor = Color(0xFFdef9eb);
 
   static Color videoColor = Color(0xFFf2d5ba);

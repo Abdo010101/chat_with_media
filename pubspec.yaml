@@ -53,12 +53,17 @@ dependencies:
   video_player: ^2.9.2
   chewie: ^1.8.5
   file_picker: ^8.1.4
- 
+  gradient_borders: ^1.0.1
+  flutter_svg: ^2.0.16
   retrofit_generator: ^9.1.2
+  
 
 
   json_annotation: ^4.9.0
   shimmer: ^3.0.0
+  flutter_tts: ^4.2.0
+  speech_to_text: ^7.0.0
+  dotted_border: ^2.1.0
 
 
 

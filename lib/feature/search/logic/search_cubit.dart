@@ -24,4 +24,11 @@ class SearchCubit extends Cubit<SearchState> {
     });
   }
   //******************************************************************************************************** */
+
+  void changeTextFormFieldBasedOnVoiceUser({required String voiceUser}) {
+    emit(const SearchState.changeTextFormFieldBasedOnVoiceLoading());
+    searchController.text = voiceUser;
+    emit(const SearchState.changeTextFormFieldBasedOnVoiceSuccess());
+  }
+  
 }
