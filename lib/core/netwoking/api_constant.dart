@@ -5,6 +5,7 @@ class ApiConstant {
 
   static const String search = "search";
   static const String localVideo = "local_video";
+  static const String getLingks = "links";
 }
 
 ///***********  This Strings for  Error Messages ****************************** */

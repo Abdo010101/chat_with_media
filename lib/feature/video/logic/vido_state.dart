@@ -31,6 +31,5 @@ class VidoState with _$VidoState {
   const factory VidoState.askVideoApiLoading() = AskVideoApiLoading;
   const factory VidoState.askVideoSuccess(VideoReponse response) =
       AskVideoApiSuccess;
-  const factory VidoState.askVideoError( ) =
-      AskVideoApiError;
+  const factory VidoState.askVideoError() = AskVideoApiError;
 }

@@ -22,6 +22,9 @@ mixin _$SearchState {
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() getLinksLoading,
+    required TResult Function(GetLinksResponse response) getLinksSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
     required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
   }) =>
@@ -32,6 +35,9 @@ mixin _$SearchState {
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? getLinksLoading,
+    TResult? Function(GetLinksResponse response)? getLinksSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
   }) =>
@@ -42,6 +48,9 @@ mixin _$SearchState {
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? getLinksLoading,
+    TResult Function(GetLinksResponse response)? getLinksSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
@@ -53,6 +62,9 @@ mixin _$SearchState {
     required TResult Function(SearchLoading value) searchLoading,
     required TResult Function(SearchSuccess value) searchSuccess,
     required TResult Function(SearchError value) searchError,
+    required TResult Function(GetLinkLoading value) getLinksLoading,
+    required TResult Function(GetLinksSuccess value) getLinksSuccess,
+    required TResult Function(GetLinksError value) getLinksError,
     required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
         changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
@@ -65,6 +77,9 @@ mixin _$SearchState {
     TResult? Function(SearchLoading value)? searchLoading,
     TResult? Function(SearchSuccess value)? searchSuccess,
     TResult? Function(SearchError value)? searchError,
+    TResult? Function(GetLinkLoading value)? getLinksLoading,
+    TResult? Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult? Function(GetLinksError value)? getLinksError,
     TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
         changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
@@ -77,6 +92,9 @@ mixin _$SearchState {
     TResult Function(SearchLoading value)? searchLoading,
     TResult Function(SearchSuccess value)? searchSuccess,
     TResult Function(SearchError value)? searchError,
+    TResult Function(GetLinkLoading value)? getLinksLoading,
+    TResult Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult Function(GetLinksError value)? getLinksError,
     TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
         changeTextFormFieldBasedOnVoiceLoading,
     TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
@@ -158,6 +176,9 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() getLinksLoading,
+    required TResult Function(GetLinksResponse response) getLinksSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
     required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
   }) {
@@ -171,6 +192,9 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? getLinksLoading,
+    TResult? Function(GetLinksResponse response)? getLinksSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
   }) {
@@ -184,6 +208,9 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? getLinksLoading,
+    TResult Function(GetLinksResponse response)? getLinksSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
@@ -201,6 +228,9 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     required TResult Function(SearchLoading value) searchLoading,
     required TResult Function(SearchSuccess value) searchSuccess,
     required TResult Function(SearchError value) searchError,
+    required TResult Function(GetLinkLoading value) getLinksLoading,
+    required TResult Function(GetLinksSuccess value) getLinksSuccess,
+    required TResult Function(GetLinksError value) getLinksError,
     required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
         changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
@@ -216,6 +246,9 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     TResult? Function(SearchLoading value)? searchLoading,
     TResult? Function(SearchSuccess value)? searchSuccess,
     TResult? Function(SearchError value)? searchError,
+    TResult? Function(GetLinkLoading value)? getLinksLoading,
+    TResult? Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult? Function(GetLinksError value)? getLinksError,
     TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
         changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
@@ -231,6 +264,9 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     TResult Function(SearchLoading value)? searchLoading,
     TResult Function(SearchSuccess value)? searchSuccess,
     TResult Function(SearchError value)? searchError,
+    TResult Function(GetLinkLoading value)? getLinksLoading,
+    TResult Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult Function(GetLinksError value)? getLinksError,
     TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
         changeTextFormFieldBasedOnVoiceLoading,
     TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
@@ -301,6 +337,9 @@ class _$SearchLoadingImpl
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() getLinksLoading,
+    required TResult Function(GetLinksResponse response) getLinksSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
     required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
   }) {
@@ -314,6 +353,9 @@ class _$SearchLoadingImpl
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? getLinksLoading,
+    TResult? Function(GetLinksResponse response)? getLinksSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
   }) {
@@ -327,6 +369,9 @@ class _$SearchLoadingImpl
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? getLinksLoading,
+    TResult Function(GetLinksResponse response)? getLinksSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
@@ -344,6 +389,9 @@ class _$SearchLoadingImpl
     required TResult Function(SearchLoading value) searchLoading,
     required TResult Function(SearchSuccess value) searchSuccess,
     required TResult Function(SearchError value) searchError,
+    required TResult Function(GetLinkLoading value) getLinksLoading,
+    required TResult Function(GetLinksSuccess value) getLinksSuccess,
+    required TResult Function(GetLinksError value) getLinksError,
     required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
         changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
@@ -359,6 +407,9 @@ class _$SearchLoadingImpl
     TResult? Function(SearchLoading value)? searchLoading,
     TResult? Function(SearchSuccess value)? searchSuccess,
     TResult? Function(SearchError value)? searchError,
+    TResult? Function(GetLinkLoading value)? getLinksLoading,
+    TResult? Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult? Function(GetLinksError value)? getLinksError,
     TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
         changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
@@ -374,6 +425,9 @@ class _$SearchLoadingImpl
     TResult Function(SearchLoading value)? searchLoading,
     TResult Function(SearchSuccess value)? searchSuccess,
     TResult Function(SearchError value)? searchError,
+    TResult Function(GetLinkLoading value)? getLinksLoading,
+    TResult Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult Function(GetLinksError value)? getLinksError,
     TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
         changeTextFormFieldBasedOnVoiceLoading,
     TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
@@ -474,6 +528,9 @@ class _$SearchSuccessImpl
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() getLinksLoading,
+    required TResult Function(GetLinksResponse response) getLinksSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
     required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
   }) {
@@ -487,6 +544,9 @@ class _$SearchSuccessImpl
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? getLinksLoading,
+    TResult? Function(GetLinksResponse response)? getLinksSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
   }) {
@@ -500,6 +560,9 @@ class _$SearchSuccessImpl
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? getLinksLoading,
+    TResult Function(GetLinksResponse response)? getLinksSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
@@ -517,6 +580,9 @@ class _$SearchSuccessImpl
     required TResult Function(SearchLoading value) searchLoading,
     required TResult Function(SearchSuccess value) searchSuccess,
     required TResult Function(SearchError value) searchError,
+    required TResult Function(GetLinkLoading value) getLinksLoading,
+    required TResult Function(GetLinksSuccess value) getLinksSuccess,
+    required TResult Function(GetLinksError value) getLinksError,
     required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
         changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
@@ -532,6 +598,9 @@ class _$SearchSuccessImpl
     TResult? Function(SearchLoading value)? searchLoading,
     TResult? Function(SearchSuccess value)? searchSuccess,
     TResult? Function(SearchError value)? searchError,
+    TResult? Function(GetLinkLoading value)? getLinksLoading,
+    TResult? Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult? Function(GetLinksError value)? getLinksError,
     TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
         changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
@@ -547,6 +616,9 @@ class _$SearchSuccessImpl
     TResult Function(SearchLoading value)? searchLoading,
     TResult Function(SearchSuccess value)? searchSuccess,
     TResult Function(SearchError value)? searchError,
+    TResult Function(GetLinkLoading value)? getLinksLoading,
+    TResult Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult Function(GetLinksError value)? getLinksError,
     TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
         changeTextFormFieldBasedOnVoiceLoading,
     TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
@@ -654,6 +726,9 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() getLinksLoading,
+    required TResult Function(GetLinksResponse response) getLinksSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
     required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
   }) {
@@ -667,6 +742,9 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? getLinksLoading,
+    TResult? Function(GetLinksResponse response)? getLinksSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
   }) {
@@ -680,6 +758,9 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? getLinksLoading,
+    TResult Function(GetLinksResponse response)? getLinksSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
@@ -697,6 +778,9 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     required TResult Function(SearchLoading value) searchLoading,
     required TResult Function(SearchSuccess value) searchSuccess,
     required TResult Function(SearchError value) searchError,
+    required TResult Function(GetLinkLoading value) getLinksLoading,
+    required TResult Function(GetLinksSuccess value) getLinksSuccess,
+    required TResult Function(GetLinksError value) getLinksError,
     required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
         changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
@@ -712,6 +796,9 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     TResult? Function(SearchLoading value)? searchLoading,
     TResult? Function(SearchSuccess value)? searchSuccess,
     TResult? Function(SearchError value)? searchError,
+    TResult? Function(GetLinkLoading value)? getLinksLoading,
+    TResult? Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult? Function(GetLinksError value)? getLinksError,
     TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
         changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
@@ -727,6 +814,9 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     TResult Function(SearchLoading value)? searchLoading,
     TResult Function(SearchSuccess value)? searchSuccess,
     TResult Function(SearchError value)? searchError,
+    TResult Function(GetLinkLoading value)? getLinksLoading,
+    TResult Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult Function(GetLinksError value)? getLinksError,
     TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
         changeTextFormFieldBasedOnVoiceLoading,
     TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
@@ -750,6 +840,568 @@ abstract class SearchError implements SearchState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchErrorImplCopyWith<_$SearchErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetLinkLoadingImplCopyWith<$Res> {
+  factory _$$GetLinkLoadingImplCopyWith(_$GetLinkLoadingImpl value,
+          $Res Function(_$GetLinkLoadingImpl) then) =
+      __$$GetLinkLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetLinkLoadingImplCopyWithImpl<$Res>
+    extends _$SearchStateCopyWithImpl<$Res, _$GetLinkLoadingImpl>
+    implements _$$GetLinkLoadingImplCopyWith<$Res> {
+  __$$GetLinkLoadingImplCopyWithImpl(
+      _$GetLinkLoadingImpl _value, $Res Function(_$GetLinkLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SearchState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$GetLinkLoadingImpl
+    with DiagnosticableTreeMixin
+    implements GetLinkLoading {
+  const _$GetLinkLoadingImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SearchState.getLinksLoading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'SearchState.getLinksLoading'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetLinkLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() searchLoading,
+    required TResult Function(SearchResponse response) searchSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() getLinksLoading,
+    required TResult Function(GetLinksResponse response) getLinksSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
+    required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return getLinksLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? searchLoading,
+    TResult? Function(SearchResponse response)? searchSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? getLinksLoading,
+    TResult? Function(GetLinksResponse response)? getLinksSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return getLinksLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? searchLoading,
+    TResult Function(SearchResponse response)? searchSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? getLinksLoading,
+    TResult Function(GetLinksResponse response)? getLinksSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
+    TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
+    required TResult orElse(),
+  }) {
+    if (getLinksLoading != null) {
+      return getLinksLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(SearchLoading value) searchLoading,
+    required TResult Function(SearchSuccess value) searchSuccess,
+    required TResult Function(SearchError value) searchError,
+    required TResult Function(GetLinkLoading value) getLinksLoading,
+    required TResult Function(GetLinksSuccess value) getLinksSuccess,
+    required TResult Function(GetLinksError value) getLinksError,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
+        changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
+        changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return getLinksLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(SearchLoading value)? searchLoading,
+    TResult? Function(SearchSuccess value)? searchSuccess,
+    TResult? Function(SearchError value)? searchError,
+    TResult? Function(GetLinkLoading value)? getLinksLoading,
+    TResult? Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult? Function(GetLinksError value)? getLinksError,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return getLinksLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(SearchLoading value)? searchLoading,
+    TResult Function(SearchSuccess value)? searchSuccess,
+    TResult Function(SearchError value)? searchError,
+    TResult Function(GetLinkLoading value)? getLinksLoading,
+    TResult Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult Function(GetLinksError value)? getLinksError,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
+    required TResult orElse(),
+  }) {
+    if (getLinksLoading != null) {
+      return getLinksLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetLinkLoading implements SearchState {
+  const factory GetLinkLoading() = _$GetLinkLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$GetLinksSuccessImplCopyWith<$Res> {
+  factory _$$GetLinksSuccessImplCopyWith(_$GetLinksSuccessImpl value,
+          $Res Function(_$GetLinksSuccessImpl) then) =
+      __$$GetLinksSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({GetLinksResponse response});
+}
+
+/// @nodoc
+class __$$GetLinksSuccessImplCopyWithImpl<$Res>
+    extends _$SearchStateCopyWithImpl<$Res, _$GetLinksSuccessImpl>
+    implements _$$GetLinksSuccessImplCopyWith<$Res> {
+  __$$GetLinksSuccessImplCopyWithImpl(
+      _$GetLinksSuccessImpl _value, $Res Function(_$GetLinksSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SearchState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? response = null,
+  }) {
+    return _then(_$GetLinksSuccessImpl(
+      null == response
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as GetLinksResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetLinksSuccessImpl
+    with DiagnosticableTreeMixin
+    implements GetLinksSuccess {
+  const _$GetLinksSuccessImpl(this.response);
+
+  @override
+  final GetLinksResponse response;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SearchState.getLinksSuccess(response: $response)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SearchState.getLinksSuccess'))
+      ..add(DiagnosticsProperty('response', response));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetLinksSuccessImpl &&
+            (identical(other.response, response) ||
+                other.response == response));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, response);
+
+  /// Create a copy of SearchState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetLinksSuccessImplCopyWith<_$GetLinksSuccessImpl> get copyWith =>
+      __$$GetLinksSuccessImplCopyWithImpl<_$GetLinksSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() searchLoading,
+    required TResult Function(SearchResponse response) searchSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() getLinksLoading,
+    required TResult Function(GetLinksResponse response) getLinksSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
+    required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return getLinksSuccess(response);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? searchLoading,
+    TResult? Function(SearchResponse response)? searchSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? getLinksLoading,
+    TResult? Function(GetLinksResponse response)? getLinksSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return getLinksSuccess?.call(response);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? searchLoading,
+    TResult Function(SearchResponse response)? searchSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? getLinksLoading,
+    TResult Function(GetLinksResponse response)? getLinksSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
+    TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
+    required TResult orElse(),
+  }) {
+    if (getLinksSuccess != null) {
+      return getLinksSuccess(response);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(SearchLoading value) searchLoading,
+    required TResult Function(SearchSuccess value) searchSuccess,
+    required TResult Function(SearchError value) searchError,
+    required TResult Function(GetLinkLoading value) getLinksLoading,
+    required TResult Function(GetLinksSuccess value) getLinksSuccess,
+    required TResult Function(GetLinksError value) getLinksError,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
+        changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
+        changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return getLinksSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(SearchLoading value)? searchLoading,
+    TResult? Function(SearchSuccess value)? searchSuccess,
+    TResult? Function(SearchError value)? searchError,
+    TResult? Function(GetLinkLoading value)? getLinksLoading,
+    TResult? Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult? Function(GetLinksError value)? getLinksError,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return getLinksSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(SearchLoading value)? searchLoading,
+    TResult Function(SearchSuccess value)? searchSuccess,
+    TResult Function(SearchError value)? searchError,
+    TResult Function(GetLinkLoading value)? getLinksLoading,
+    TResult Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult Function(GetLinksError value)? getLinksError,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
+    required TResult orElse(),
+  }) {
+    if (getLinksSuccess != null) {
+      return getLinksSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetLinksSuccess implements SearchState {
+  const factory GetLinksSuccess(final GetLinksResponse response) =
+      _$GetLinksSuccessImpl;
+
+  GetLinksResponse get response;
+
+  /// Create a copy of SearchState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetLinksSuccessImplCopyWith<_$GetLinksSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetLinksErrorImplCopyWith<$Res> {
+  factory _$$GetLinksErrorImplCopyWith(
+          _$GetLinksErrorImpl value, $Res Function(_$GetLinksErrorImpl) then) =
+      __$$GetLinksErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ApiErrorModel apiErrorModel});
+}
+
+/// @nodoc
+class __$$GetLinksErrorImplCopyWithImpl<$Res>
+    extends _$SearchStateCopyWithImpl<$Res, _$GetLinksErrorImpl>
+    implements _$$GetLinksErrorImplCopyWith<$Res> {
+  __$$GetLinksErrorImplCopyWithImpl(
+      _$GetLinksErrorImpl _value, $Res Function(_$GetLinksErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SearchState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? apiErrorModel = null,
+  }) {
+    return _then(_$GetLinksErrorImpl(
+      null == apiErrorModel
+          ? _value.apiErrorModel
+          : apiErrorModel // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetLinksErrorImpl
+    with DiagnosticableTreeMixin
+    implements GetLinksError {
+  const _$GetLinksErrorImpl(this.apiErrorModel);
+
+  @override
+  final ApiErrorModel apiErrorModel;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SearchState.getLinksError(apiErrorModel: $apiErrorModel)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SearchState.getLinksError'))
+      ..add(DiagnosticsProperty('apiErrorModel', apiErrorModel));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetLinksErrorImpl &&
+            (identical(other.apiErrorModel, apiErrorModel) ||
+                other.apiErrorModel == apiErrorModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, apiErrorModel);
+
+  /// Create a copy of SearchState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetLinksErrorImplCopyWith<_$GetLinksErrorImpl> get copyWith =>
+      __$$GetLinksErrorImplCopyWithImpl<_$GetLinksErrorImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() searchLoading,
+    required TResult Function(SearchResponse response) searchSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() getLinksLoading,
+    required TResult Function(GetLinksResponse response) getLinksSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
+    required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return getLinksError(apiErrorModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? searchLoading,
+    TResult? Function(SearchResponse response)? searchSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? getLinksLoading,
+    TResult? Function(GetLinksResponse response)? getLinksSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return getLinksError?.call(apiErrorModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? searchLoading,
+    TResult Function(SearchResponse response)? searchSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? getLinksLoading,
+    TResult Function(GetLinksResponse response)? getLinksSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
+    TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
+    required TResult orElse(),
+  }) {
+    if (getLinksError != null) {
+      return getLinksError(apiErrorModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(SearchLoading value) searchLoading,
+    required TResult Function(SearchSuccess value) searchSuccess,
+    required TResult Function(SearchError value) searchError,
+    required TResult Function(GetLinkLoading value) getLinksLoading,
+    required TResult Function(GetLinksSuccess value) getLinksSuccess,
+    required TResult Function(GetLinksError value) getLinksError,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
+        changeTextFormFieldBasedOnVoiceLoading,
+    required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
+        changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return getLinksError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(SearchLoading value)? searchLoading,
+    TResult? Function(SearchSuccess value)? searchSuccess,
+    TResult? Function(SearchError value)? searchError,
+    TResult? Function(GetLinkLoading value)? getLinksLoading,
+    TResult? Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult? Function(GetLinksError value)? getLinksError,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
+  }) {
+    return getLinksError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(SearchLoading value)? searchLoading,
+    TResult Function(SearchSuccess value)? searchSuccess,
+    TResult Function(SearchError value)? searchError,
+    TResult Function(GetLinkLoading value)? getLinksLoading,
+    TResult Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult Function(GetLinksError value)? getLinksError,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
+        changeTextFormFieldBasedOnVoiceLoading,
+    TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
+        changeTextFormFieldBasedOnVoiceSuccess,
+    required TResult orElse(),
+  }) {
+    if (getLinksError != null) {
+      return getLinksError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetLinksError implements SearchState {
+  const factory GetLinksError(final ApiErrorModel apiErrorModel) =
+      _$GetLinksErrorImpl;
+
+  ApiErrorModel get apiErrorModel;
+
+  /// Create a copy of SearchState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetLinksErrorImplCopyWith<_$GetLinksErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -811,6 +1463,9 @@ class _$ChangeTextFormFieldBasedOnVoiceLoadingImpl
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() getLinksLoading,
+    required TResult Function(GetLinksResponse response) getLinksSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
     required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
   }) {
@@ -824,6 +1479,9 @@ class _$ChangeTextFormFieldBasedOnVoiceLoadingImpl
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? getLinksLoading,
+    TResult? Function(GetLinksResponse response)? getLinksSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
   }) {
@@ -837,6 +1495,9 @@ class _$ChangeTextFormFieldBasedOnVoiceLoadingImpl
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? getLinksLoading,
+    TResult Function(GetLinksResponse response)? getLinksSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
@@ -854,6 +1515,9 @@ class _$ChangeTextFormFieldBasedOnVoiceLoadingImpl
     required TResult Function(SearchLoading value) searchLoading,
     required TResult Function(SearchSuccess value) searchSuccess,
     required TResult Function(SearchError value) searchError,
+    required TResult Function(GetLinkLoading value) getLinksLoading,
+    required TResult Function(GetLinksSuccess value) getLinksSuccess,
+    required TResult Function(GetLinksError value) getLinksError,
     required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
         changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
@@ -869,6 +1533,9 @@ class _$ChangeTextFormFieldBasedOnVoiceLoadingImpl
     TResult? Function(SearchLoading value)? searchLoading,
     TResult? Function(SearchSuccess value)? searchSuccess,
     TResult? Function(SearchError value)? searchError,
+    TResult? Function(GetLinkLoading value)? getLinksLoading,
+    TResult? Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult? Function(GetLinksError value)? getLinksError,
     TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
         changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
@@ -884,6 +1551,9 @@ class _$ChangeTextFormFieldBasedOnVoiceLoadingImpl
     TResult Function(SearchLoading value)? searchLoading,
     TResult Function(SearchSuccess value)? searchSuccess,
     TResult Function(SearchError value)? searchError,
+    TResult Function(GetLinkLoading value)? getLinksLoading,
+    TResult Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult Function(GetLinksError value)? getLinksError,
     TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
         changeTextFormFieldBasedOnVoiceLoading,
     TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
@@ -960,6 +1630,9 @@ class _$ChangeTextFormFieldBasedOnVoiceSuccessImpl
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() getLinksLoading,
+    required TResult Function(GetLinksResponse response) getLinksSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
     required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
   }) {
@@ -973,6 +1646,9 @@ class _$ChangeTextFormFieldBasedOnVoiceSuccessImpl
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? getLinksLoading,
+    TResult? Function(GetLinksResponse response)? getLinksSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
   }) {
@@ -986,6 +1662,9 @@ class _$ChangeTextFormFieldBasedOnVoiceSuccessImpl
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? getLinksLoading,
+    TResult Function(GetLinksResponse response)? getLinksSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult Function()? changeTextFormFieldBasedOnVoiceSuccess,
     required TResult orElse(),
@@ -1003,6 +1682,9 @@ class _$ChangeTextFormFieldBasedOnVoiceSuccessImpl
     required TResult Function(SearchLoading value) searchLoading,
     required TResult Function(SearchSuccess value) searchSuccess,
     required TResult Function(SearchError value) searchError,
+    required TResult Function(GetLinkLoading value) getLinksLoading,
+    required TResult Function(GetLinksSuccess value) getLinksSuccess,
+    required TResult Function(GetLinksError value) getLinksError,
     required TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)
         changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)
@@ -1018,6 +1700,9 @@ class _$ChangeTextFormFieldBasedOnVoiceSuccessImpl
     TResult? Function(SearchLoading value)? searchLoading,
     TResult? Function(SearchSuccess value)? searchSuccess,
     TResult? Function(SearchError value)? searchError,
+    TResult? Function(GetLinkLoading value)? getLinksLoading,
+    TResult? Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult? Function(GetLinksError value)? getLinksError,
     TResult? Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
         changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?
@@ -1033,6 +1718,9 @@ class _$ChangeTextFormFieldBasedOnVoiceSuccessImpl
     TResult Function(SearchLoading value)? searchLoading,
     TResult Function(SearchSuccess value)? searchSuccess,
     TResult Function(SearchError value)? searchError,
+    TResult Function(GetLinkLoading value)? getLinksLoading,
+    TResult Function(GetLinksSuccess value)? getLinksSuccess,
+    TResult Function(GetLinksError value)? getLinksError,
     TResult Function(ChangeTextFormFieldBasedOnVoiceLoading value)?
         changeTextFormFieldBasedOnVoiceLoading,
     TResult Function(ChangeTextFormFieldBasedOnVoiceSuccess value)?

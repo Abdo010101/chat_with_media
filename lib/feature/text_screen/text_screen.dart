@@ -74,25 +74,19 @@ class _TextScreenState extends State<TextScreen> {
                 }, searchSuccess: (res) {
                   return Column(
                     children: [
-                      Semantics(
-                        label: "Tap to Speak",
-                        child: GestureDetector(
-                          onTap: () async {},
-                          child: MouseRegion(
-                            cursor: SystemMouseCursors.click,
-                            child: Scrollbar(
-                              thumbVisibility: true,
-                              child: SingleChildScrollView(
-                                scrollDirection: Axis.vertical,
-                                child: Text(
-                                  res.response?.isNotEmpty == true
-                                      ? res.response.toString()
-                                      : "No data available.",
-                                  style: TextStyles.font14BlueSemiBold.copyWith(
-                                    color: Colors.white,
-                                    fontSize: textSize,
-                                  ),
-                                ),
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: Scrollbar(
+                          thumbVisibility: true,
+                          child: SingleChildScrollView(
+                            scrollDirection: Axis.vertical,
+                            child: Text(
+                              res.response?.isNotEmpty == true
+                                  ? res.response.toString()
+                                  : "No data available.",
+                              style: TextStyles.font14BlueSemiBold.copyWith(
+                                color: Colors.white,
+                                fontSize: textSize,
                               ),
                             ),
                           ),

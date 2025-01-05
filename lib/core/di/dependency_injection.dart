@@ -18,7 +18,7 @@ Future<void> setUp() async {
   getIt.registerSingleton<SharedPreferences>(pref);
 
   // // login di
-  
+
   getIt.registerLazySingleton<SearchApi>(() => SearchApi(dio));
   getIt.registerLazySingleton<SearchRepo>(() => SearchRepo(getIt()));
   getIt.registerFactory<SearchCubit>(() => SearchCubit(getIt()));

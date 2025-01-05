@@ -1,5 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:media_chat/core/netwoking/api_constant.dart';
+import 'package:media_chat/feature/search/data/models/get_links_request_body.dart';
+import 'package:media_chat/feature/search/data/models/get_links_response.dart';
 import 'package:media_chat/feature/search/data/models/search_request_body.dart';
 import 'package:media_chat/feature/search/data/models/search_response.dart';
 import 'package:retrofit/retrofit.dart';
@@ -12,4 +14,7 @@ abstract class SearchApi {
 
   @POST(ApiConstant.search)
   Future<SearchResponse> search(@Body() SearchRequestBody param);
+
+  @POST(ApiConstant.getLingks)
+  Future<GetLinksResponse> getLinks(@Body() GetLinksRequestBody param);
 }

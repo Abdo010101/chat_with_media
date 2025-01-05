@@ -15,8 +15,6 @@ class MultiLineShimmer extends StatelessWidget {
     this.borderRadius = 8.0, // Default border radius
   }) : super(key: key);
 
-
-
   @override
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
@@ -34,6 +32,7 @@ class MultiLineShimmer extends StatelessWidget {
                 width: double.infinity,
                 height: height,
                 color: Colors.greenAccent,
+                
               ),
             ),
           );

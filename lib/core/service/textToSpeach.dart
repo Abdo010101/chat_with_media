@@ -7,9 +7,8 @@ abstract class TextToSpeechService {
   static final FlutterTts _flutterTts = FlutterTts();
   static bool _isSpeaking = false;
 
-static Future<void> initTTS() async {
+  static Future<void> initTTS() async {
     try {
-
       _flutterTts.setStartHandler(() {
         _isSpeaking = true;
         print("TTS started speaking");
@@ -31,8 +30,8 @@ static Future<void> initTTS() async {
 
         // List<dynamic> voices = await _flutterTts.getVoices;
 
-        await _flutterTts.setLanguage(
-            "en-US"); // Setting the language to Arabic
+        await _flutterTts
+            .setLanguage("en-US"); // Setting the language to Arabic
 
         await _flutterTts.setVoice({"name": "Majed", "locale": "ar-001"});
 
@@ -52,8 +51,8 @@ static Future<void> initTTS() async {
         // await flutterTts.setQueueMode(1);
       } else {
         _setAwaitOptions();
-        await _flutterTts.setLanguage(
-            "ar-SA"); // Setting the language to Arabic
+        await _flutterTts
+            .setLanguage("ar-SA"); // Setting the language to Arabic
 
         List<dynamic> voices = await _flutterTts.getVoices;
         print(voices);
@@ -62,12 +61,11 @@ static Future<void> initTTS() async {
 
         await _flutterTts.setEngine("com.google.android.tts");
 
-        await _flutterTts.setVoice(
-            {"name": "ar-xa-x-ard-local", "locale": "ar"});
+        await _flutterTts
+            .setVoice({"name": "ar-xa-x-ard-local", "locale": "ar"});
       }
-    }catch(e){
+    } catch (e) {
       print("Error during TTS initialization: $e");
-
     }
   }
 
@@ -79,7 +77,7 @@ static Future<void> initTTS() async {
     await _flutterTts.speak(text);
   }
 
-  static Future<void> stop()  async {
+  static Future<void> stop() async {
     await _flutterTts.stop();
   }
 
@@ -88,8 +86,6 @@ static Future<void> initTTS() async {
   }
 
   static void clearVoice() {
-
     _flutterTts.clearVoice();
   }
-
 }

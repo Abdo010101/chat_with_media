@@ -15,8 +15,7 @@ class VideoRepo {
       Response response = await dio.post(
         'https://ml-test.atwdemo.com/local_video', // Replace with your API endpoint
         data: {
-          'video' :formData,
-          
+          'video': formData,
         },
         options: Options(
           headers: {

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class GradientCircleAvatar extends StatelessWidget {
-  final String text;
+class CirckeAvatarWithIcon extends StatelessWidget {
+  final IconData icon;
   final double radius;
   final Gradient gradient;
 
-  const GradientCircleAvatar({
+  const CirckeAvatarWithIcon({
     Key? key,
-    required this.text,
-    this.radius = 50.0,
+    required this.icon,
+    this.radius = 45.0,
     required this.gradient,
   }) : super(key: key);
 
@@ -26,14 +26,19 @@ class GradientCircleAvatar extends StatelessWidget {
         ),
       ]),
       alignment: Alignment.center,
-      child: Text(
-        text,
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: radius / 2.5, // Adjust font size based on radius
-          fontWeight: FontWeight.bold,
-        ),
+      child: Icon(
+        icon,
+        color: Colors.white,
+        size: 35,
       ),
+
+      //  Text(
+      //   text,
+      //   style: TextStyle(
+      //     color: Colors.white,
+      //     fontSize: radius / 2.5, // Adjust font size based on radius
+      //     fontWeight: FontWeight.bold,
+      //   ),
     );
   }
 }

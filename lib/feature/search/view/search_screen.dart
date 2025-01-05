@@ -7,18 +7,17 @@ import 'package:media_chat/core/di/dependency_injection.dart';
 import 'package:media_chat/core/helpers/extention.dart';
 import 'package:media_chat/core/routing/routes.dart';
 import 'package:media_chat/core/service/speachToText.dart';
+import 'package:media_chat/core/service/textToSpeach.dart';
 import 'package:media_chat/core/theming/colors.dart';
 import 'package:media_chat/core/theming/style.dart';
 import 'package:media_chat/core/widgets/app_button.dart';
 import 'package:media_chat/core/widgets/app_text_form_filed.dart';
 import 'package:media_chat/feature/search/logic/search_cubit.dart';
 import 'package:media_chat/feature/search/logic/search_state.dart';
-import 'package:media_chat/feature/search/view/widgtes/bloc_builder_search_result.dart';
-import 'package:media_chat/feature/search/view/widgtes/circle_avatar_gradient.dart';
+import 'package:media_chat/feature/search/view/widgtes/bloc_builder_urls.dart';
+import 'package:media_chat/feature/search/view/widgtes/circke_avatar_with_icon.dart';
 
 class QuestionSearchScreen extends StatefulWidget {
-
-  
   @override
   _QuestionSearchScreenState createState() => _QuestionSearchScreenState();
 }
@@ -98,10 +97,11 @@ class _QuestionSearchScreenState extends State<QuestionSearchScreen> {
                                 ),
                                 _buildInputRow(context),
                                 const SizedBox(height: 20),
-                                BlocBuilderSearchResult(
-                                  textSize: textSize,
-                                  searchState: state,
-                                ),
+                                // BlocBuilderSearchResult(
+                                //   textSize: textSize,
+                                //   searchState: state,
+                                // ),
+                                const BlocBuilderUrls(),
                                 const SizedBox(height: 16),
                               ],
                             ),
@@ -113,10 +113,6 @@ class _QuestionSearchScreenState extends State<QuestionSearchScreen> {
                 );
               },
             ),
-            // bottomNavigationBar: Padding(
-            //   padding: const EdgeInsets.symmetric(vertical: 30.0),
-            //   child: _buildAskMeButton(context),
-            // ),
           );
         },
       ),
@@ -126,30 +122,43 @@ class _QuestionSearchScreenState extends State<QuestionSearchScreen> {
   Widget _buildBackgroundImages(SearchState state) {
     return Stack(
       children: [
-        const Positioned(
+        Positioned(
           left: 40,
           bottom: 120,
-          child: GradientCircleAvatar(
-            text: 'voice',
-            gradient: LinearGradient(
-              colors: [Colors.blue, Colors.green],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
+          child: GestureDetector(
+            onTap: () async {
+              if (state is SearchSuccess) {
+                await TextToSpeechService.speak(
+                    text: state.response.response.toString());
+              }
+            },
+            child: CirckeAvatarWithIcon(
+              icon: Icons.record_voice_over_rounded,
+              gradient: state is SearchSuccess
+                  ? const LinearGradient(
+                      colors: [Colors.blue, Colors.green],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    )
+                  : const LinearGradient(
+                      colors: [Colors.black, Colors.black],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
             ),
           ),
         ),
         Positioned(
             right: 40,
             bottom: 50,
-            child: InkWell(
-              splashColor: Colors.transparent,
+            child: GestureDetector(
               onTap: () {
                 context.pushNamed(Routes.textScreen, arguments: state);
               },
-              child: const GradientCircleAvatar(
-                text: 'Text',
+              child: const CirckeAvatarWithIcon(
+                icon: Icons.message,
                 gradient: LinearGradient(
-                  colors: [Colors.blue, Colors.green],
+                  colors: [Colors.black, Colors.black],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
@@ -174,16 +183,18 @@ class _QuestionSearchScreenState extends State<QuestionSearchScreen> {
               }
               return null;
             },
-            onFieldSubmitted: (val) {
+            onFieldSubmitted: (val) async {
               if (context
                   .read<SearchCubit>()
                   .formkey
                   .currentState!
                   .validate()) {
+                await context.read<SearchCubit>().getLinks();
                 context.read<SearchCubit>().doSearch();
               }
             },
             suffixIcon: InkWell(
+              splashColor: Colors.transparent,
               onTap: () async {
                 // Start listening for speech
                 await SpeechToTextService.startListening().then((_) {

@@ -27,9 +27,9 @@ class BlocBuilderSearchResult extends StatelessWidget {
       return const Expanded(
           child: Center(
               child: MultiLineShimmer(
-        lineCount: 5,
-        spacing: 20,
-        height: 14,
+        lineCount: 10,
+        spacing: 30,
+        height: 20,
       )));
     }, orElse: () {
       return const SizedBox.shrink();
