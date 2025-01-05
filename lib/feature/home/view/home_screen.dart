@@ -47,6 +47,8 @@ class HomeScreen extends StatelessWidget {
                       Text('Videoes', style: TextStyles.font14LightGrayRegular),
                 ),
               ),
+
+              
               const SizedBox(
                 height: 20,
               ),

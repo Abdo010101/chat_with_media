@@ -31,9 +31,9 @@ abstract class TextToSpeechService {
         // List<dynamic> voices = await _flutterTts.getVoices;
 
         await _flutterTts
-            .setLanguage("en-US"); // Setting the language to Arabic
+            .setLanguage("en-AU"); // Setting the language to Arabic
 
-        await _flutterTts.setVoice({"name": "Majed", "locale": "ar-001"});
+        await _flutterTts.setVoice({"name": "Karen", "locale": "en-AU"});
 
         await _flutterTts.setIosAudioCategory(
             IosTextToSpeechAudioCategory.ambient,
@@ -44,7 +44,7 @@ abstract class TextToSpeechService {
             ],
             IosTextToSpeechAudioMode.voicePrompt);
 
-        await _flutterTts.setSpeechRate(0.58);
+        await _flutterTts.setSpeechRate(0.6);
 
         await _flutterTts.awaitSpeakCompletion(true);
         await _flutterTts.awaitSynthCompletion(true);
@@ -52,9 +52,10 @@ abstract class TextToSpeechService {
       } else {
         _setAwaitOptions();
         await _flutterTts
-            .setLanguage("ar-SA"); // Setting the language to Arabic
+            .setLanguage("en-AU"); // Setting the language to Arabic
 
         List<dynamic> voices = await _flutterTts.getVoices;
+        print('the voices  herer ');
         print(voices);
 
         var engines = await _flutterTts.getEngines;
@@ -62,7 +63,7 @@ abstract class TextToSpeechService {
         await _flutterTts.setEngine("com.google.android.tts");
 
         await _flutterTts
-            .setVoice({"name": "ar-xa-x-ard-local", "locale": "ar"});
+            .setVoice({"name": "Karen", "locale": "en-AU"});
       }
     } catch (e) {
       print("Error during TTS initialization: $e");
