@@ -4,10 +4,12 @@ class CirckeAvatarWithIcon extends StatelessWidget {
   final IconData icon;
   final double radius;
   final Gradient gradient;
+  final Color? color;
 
   const CirckeAvatarWithIcon({
     Key? key,
     required this.icon,
+    required this.color,
     this.radius = 45.0,
     required this.gradient,
   }) : super(key: key);
@@ -28,7 +30,7 @@ class CirckeAvatarWithIcon extends StatelessWidget {
       alignment: Alignment.center,
       child: Icon(
         icon,
-        color: Colors.white,
+        color: color ?? Colors.white,
         size: 35,
       ),
 

@@ -25,6 +25,7 @@ class QuestionSearchScreen extends StatefulWidget {
 class _QuestionSearchScreenState extends State<QuestionSearchScreen> {
   final TextEditingController _questionController = TextEditingController();
   double textSize = 14.0;
+  bool isStoped = false;
   @override
   void dispose() {
     _questionController.dispose();
@@ -132,19 +133,31 @@ class _QuestionSearchScreenState extends State<QuestionSearchScreen> {
                     text: state.response.response.toString());
               }
             },
-            child: CirckeAvatarWithIcon(
-              icon: Icons.record_voice_over_rounded,
-              gradient: state is SearchSuccess
-                  ? const LinearGradient(
-                      colors: [Colors.blue, Colors.green],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    )
-                  : const LinearGradient(
-                      colors: [Colors.black, Colors.black],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
+            child: GestureDetector(
+              onTap: () async {
+                if (state is SearchSuccess) {
+                  setState(() {
+                    isStoped = !isStoped;
+                  });
+                  if (isStoped == false) {
+                    await TextToSpeechService.speak(
+                        text: state.response.toString());
+                  } else {
+                    await TextToSpeechService.stop();
+                  }
+                }
+              },
+              child: CirckeAvatarWithIcon(
+                color: state is SearchSuccess
+                    ? const Color.fromRGBO(255, 215, 64, 1)
+                    : Colors.white,
+                icon: Icons.record_voice_over_rounded,
+                gradient: const LinearGradient(
+                  colors: [Colors.black, Colors.black],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
             ),
           ),
         ),
@@ -155,9 +168,12 @@ class _QuestionSearchScreenState extends State<QuestionSearchScreen> {
               onTap: () {
                 context.pushNamed(Routes.textScreen, arguments: state);
               },
-              child: const CirckeAvatarWithIcon(
+              child: CirckeAvatarWithIcon(
+                color: state is SearchSuccess
+                    ? const Color.fromRGBO(255, 215, 64, 1)
+                    : Colors.white,
                 icon: Icons.message,
-                gradient: LinearGradient(
+                gradient: const LinearGradient(
                   colors: [Colors.black, Colors.black],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
