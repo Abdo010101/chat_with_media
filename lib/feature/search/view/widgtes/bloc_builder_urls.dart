@@ -8,6 +8,8 @@ import 'package:media_chat/feature/search/logic/search_state.dart';
 import 'package:media_chat/feature/search/view/widgtes/shimmer_widget.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
+import '../../../weview/webview.dart';
+
 class BlocBuilderUrls extends StatelessWidget {
   const BlocBuilderUrls({super.key});
 
@@ -27,35 +29,13 @@ class BlocBuilderUrls extends StatelessWidget {
                   return InkWell(
                     splashColor: Colors.transparent,
                     onTap: () async {
-                      final controller = WebViewController()
-                        ..setJavaScriptMode(JavaScriptMode.unrestricted)
-                        ..setNavigationDelegate(
-                          NavigationDelegate(
-                            onProgress: (int progress) {
-                              // Update loading bar.
-                              log('Hellosdf');
-                            },
-                            onPageStarted: (String url) {},
-                            onPageFinished: (String url) {},
-                            onHttpError: (HttpResponseError error) {},
-                            onWebResourceError: (WebResourceError error) {},
-                            onNavigationRequest: (NavigationRequest request) {
-                              if (request.url
-                                  .startsWith('https://www.youtube.com/')) {
-                                return NavigationDecision.prevent;
-                              }
-                              return NavigationDecision.navigate;
-                            },
-                          ),
-                        )
-                        ..loadRequest(Uri.parse(
-                            response.urls?[index].toString() ??
-                                "fake webistsre"));
-                      Navigator.push(
+                      final url =
+                          response.urls?[index].toString() ?? "fake webistsre";
+                                           Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                WebViewWidget(controller: controller)),
+                                WebviewScreen(url: url)),
                       );
                     },
                     child: ListTile(

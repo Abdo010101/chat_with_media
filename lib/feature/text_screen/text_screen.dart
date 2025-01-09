@@ -165,14 +165,17 @@ class _TextScreenState extends State<TextScreen> {
                   ),
                 );
               }, searchSuccess: (res) {
-                return Column(
-                  children: [
-                    MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      child: Scrollbar(
-                        thumbVisibility: true,
-                        child: SingleChildScrollView(
-                          scrollDirection: Axis.vertical,
+                return Container(
+                  height: MediaQuery.sizeOf(context).height / 1.29,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        GestureDetector(
+                          onLongPressStart: (LongPressStartDetails details) {
+                            final Offset tapPosition = details.globalPosition;
+                            showTranslateMenu(
+                                res.response.toString(), context, tapPosition);
+                          },
                           child: Text(
                             res.response?.isNotEmpty == true
                                 ? res.response.toString()
@@ -183,34 +186,56 @@ class _TextScreenState extends State<TextScreen> {
                             ),
                           ),
                         ),
-                      ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        if (isLoding)
+                          Text(
+                            'loading......',
+                            style: TextStyles.font14BlueSemiBold.copyWith(
+                              color: Colors.white,
+                              fontSize: textSize,
+                            ),
+                          ),
+                        if (!isLoding && translatedText.isNotEmpty)
+                          Text(
+                            translatedText,
+                            style: TextStyles.font14BlueSemiBold.copyWith(
+                              color: Colors.white,
+                              fontSize: textSize,
+                            ),
+                            textDirection: langCode == 'ar'
+                                ? TextDirection.rtl
+                                : TextDirection.ltr,
+                          ),
+                        Align(
+                            alignment: Alignment.bottomRight,
+                            child: IconButton(
+                                onPressed: () async {
+                                  setState(() {
+                                    isStoped = !isStoped;
+                                  });
+                                  if (isStoped == false) {
+                                    await TextToSpeechService.speak(
+                                        text: res.response.toString());
+                                  } else {
+                                    await TextToSpeechService.stop();
+                                  }
+                                },
+                                icon: isStoped
+                                    ? const Icon(
+                                        Icons.volume_off,
+                                        color: Colors.green,
+                                        size: 35,
+                                      )
+                                    : const Icon(
+                                        Icons.volume_up,
+                                        color: Colors.green,
+                                        size: 35,
+                                      ))),
+                      ],
                     ),
-                    Align(
-                        alignment: Alignment.bottomRight,
-                        child: IconButton(
-                            onPressed: () async {
-                              setState(() {
-                                isStoped = !isStoped;
-                              });
-                              if (isStoped == false) {
-                                await TextToSpeechService.speak(
-                                    text: res.response.toString());
-                              } else {
-                                await TextToSpeechService.stop();
-                              }
-                            },
-                            icon: isStoped
-                                ? const Icon(
-                                    Icons.volume_off,
-                                    color: Colors.green,
-                                    size: 35,
-                                  )
-                                : const Icon(
-                                    Icons.volume_up,
-                                    color: Colors.green,
-                                    size: 35,
-                                  )))
-                  ],
+                  ),
                 );
               }, searchLoading: () {
                 return Text(

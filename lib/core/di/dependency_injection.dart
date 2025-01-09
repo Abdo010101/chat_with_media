@@ -21,7 +21,7 @@ Future<void> setUp() async {
 
   getIt.registerLazySingleton<SearchApi>(() => SearchApi(dio));
   getIt.registerLazySingleton<SearchRepo>(() => SearchRepo(getIt()));
-  getIt.registerFactory<SearchCubit>(() => SearchCubit(getIt()));
+  getIt.registerLazySingleton<SearchCubit>(() => SearchCubit(getIt()));
 
   // // login di
   getIt.registerLazySingleton<VideoRepo>(() => VideoRepo());
