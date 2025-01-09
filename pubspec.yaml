@@ -56,6 +56,7 @@ dependencies:
   gradient_borders: ^1.0.1
   flutter_svg: ^2.0.16
   retrofit_generator: ^9.1.2
+  sqflite: ^2.4.1
   
 
 

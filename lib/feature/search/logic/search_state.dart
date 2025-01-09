@@ -13,7 +13,7 @@ class SearchState with _$SearchState {
   const factory SearchState.searchLoading() = SearchLoading;
   const factory SearchState.searchSuccess(SearchResponse response) =
       SearchSuccess;
-  const factory SearchState.searchError(ApiErrorModel apiErrorModel) =
+  const factory SearchState.searchError() =
       SearchError;
 
   const factory SearchState.getLinksLoading() = GetLinkLoading;

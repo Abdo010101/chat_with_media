@@ -33,6 +33,16 @@ class _QuestionSearchScreenState extends State<QuestionSearchScreen> {
   }
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    SpeechToTextService.recognizedWordsNotifier.addListener(() {
+      getIt.get<SearchCubit>().searchController.text =
+          SpeechToTextService.recognizedWordsNotifier.value;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => getIt.get<SearchCubit>(),
@@ -212,16 +222,9 @@ class _QuestionSearchScreenState extends State<QuestionSearchScreen> {
             suffixIcon: InkWell(
               splashColor: Colors.transparent,
               onTap: () async {
-                // Start listening for speech
-                await SpeechToTextService.startListening().then((_) {
-                  final voiceText = SpeechToTextService.recognizedWords;
-                  context
-                      .read<SearchCubit>()
-                      .changeTextFormFieldBasedOnVoiceUser(
-                        voiceUser: voiceText,
-                      );
-                  log("Recognized Words: $voiceText");
-                });
+                TextToSpeechService.speak(text: "Speak");
+
+                await SpeechToTextService.startListening();
               },
               child: SvgPicture.asset(
                 'assets/images/mic.svg',

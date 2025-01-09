@@ -21,7 +21,7 @@ mixin _$SearchState {
     required TResult Function() initial,
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
-    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() searchError,
     required TResult Function() getLinksLoading,
     required TResult Function(GetLinksResponse response) getLinksSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
@@ -34,7 +34,7 @@ mixin _$SearchState {
     TResult? Function()? initial,
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
-    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? searchError,
     TResult? Function()? getLinksLoading,
     TResult? Function(GetLinksResponse response)? getLinksSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -47,7 +47,7 @@ mixin _$SearchState {
     TResult Function()? initial,
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
-    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? searchError,
     TResult Function()? getLinksLoading,
     TResult Function(GetLinksResponse response)? getLinksSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -175,7 +175,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     required TResult Function() initial,
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
-    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() searchError,
     required TResult Function() getLinksLoading,
     required TResult Function(GetLinksResponse response) getLinksSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
@@ -191,7 +191,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     TResult? Function()? initial,
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
-    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? searchError,
     TResult? Function()? getLinksLoading,
     TResult? Function(GetLinksResponse response)? getLinksSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -207,7 +207,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements Initial {
     TResult Function()? initial,
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
-    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? searchError,
     TResult Function()? getLinksLoading,
     TResult Function(GetLinksResponse response)? getLinksSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -336,7 +336,7 @@ class _$SearchLoadingImpl
     required TResult Function() initial,
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
-    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() searchError,
     required TResult Function() getLinksLoading,
     required TResult Function(GetLinksResponse response) getLinksSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
@@ -352,7 +352,7 @@ class _$SearchLoadingImpl
     TResult? Function()? initial,
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
-    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? searchError,
     TResult? Function()? getLinksLoading,
     TResult? Function(GetLinksResponse response)? getLinksSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -368,7 +368,7 @@ class _$SearchLoadingImpl
     TResult Function()? initial,
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
-    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? searchError,
     TResult Function()? getLinksLoading,
     TResult Function(GetLinksResponse response)? getLinksSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -527,7 +527,7 @@ class _$SearchSuccessImpl
     required TResult Function() initial,
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
-    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() searchError,
     required TResult Function() getLinksLoading,
     required TResult Function(GetLinksResponse response) getLinksSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
@@ -543,7 +543,7 @@ class _$SearchSuccessImpl
     TResult? Function()? initial,
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
-    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? searchError,
     TResult? Function()? getLinksLoading,
     TResult? Function(GetLinksResponse response)? getLinksSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -559,7 +559,7 @@ class _$SearchSuccessImpl
     TResult Function()? initial,
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
-    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? searchError,
     TResult Function()? getLinksLoading,
     TResult Function(GetLinksResponse response)? getLinksSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -650,8 +650,6 @@ abstract class _$$SearchErrorImplCopyWith<$Res> {
   factory _$$SearchErrorImplCopyWith(
           _$SearchErrorImpl value, $Res Function(_$SearchErrorImpl) then) =
       __$$SearchErrorImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({ApiErrorModel apiErrorModel});
 }
 
 /// @nodoc
@@ -664,60 +662,32 @@ class __$$SearchErrorImplCopyWithImpl<$Res>
 
   /// Create a copy of SearchState
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? apiErrorModel = null,
-  }) {
-    return _then(_$SearchErrorImpl(
-      null == apiErrorModel
-          ? _value.apiErrorModel
-          : apiErrorModel // ignore: cast_nullable_to_non_nullable
-              as ApiErrorModel,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
-  const _$SearchErrorImpl(this.apiErrorModel);
-
-  @override
-  final ApiErrorModel apiErrorModel;
+  const _$SearchErrorImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SearchState.searchError(apiErrorModel: $apiErrorModel)';
+    return 'SearchState.searchError()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SearchState.searchError'))
-      ..add(DiagnosticsProperty('apiErrorModel', apiErrorModel));
+    properties.add(DiagnosticsProperty('type', 'SearchState.searchError'));
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SearchErrorImpl &&
-            (identical(other.apiErrorModel, apiErrorModel) ||
-                other.apiErrorModel == apiErrorModel));
+        (other.runtimeType == runtimeType && other is _$SearchErrorImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, apiErrorModel);
-
-  /// Create a copy of SearchState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SearchErrorImplCopyWith<_$SearchErrorImpl> get copyWith =>
-      __$$SearchErrorImplCopyWithImpl<_$SearchErrorImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -725,14 +695,14 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     required TResult Function() initial,
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
-    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() searchError,
     required TResult Function() getLinksLoading,
     required TResult Function(GetLinksResponse response) getLinksSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
     required TResult Function() changeTextFormFieldBasedOnVoiceLoading,
     required TResult Function() changeTextFormFieldBasedOnVoiceSuccess,
   }) {
-    return searchError(apiErrorModel);
+    return searchError();
   }
 
   @override
@@ -741,14 +711,14 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     TResult? Function()? initial,
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
-    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? searchError,
     TResult? Function()? getLinksLoading,
     TResult? Function(GetLinksResponse response)? getLinksSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
     TResult? Function()? changeTextFormFieldBasedOnVoiceLoading,
     TResult? Function()? changeTextFormFieldBasedOnVoiceSuccess,
   }) {
-    return searchError?.call(apiErrorModel);
+    return searchError?.call();
   }
 
   @override
@@ -757,7 +727,7 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     TResult Function()? initial,
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
-    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? searchError,
     TResult Function()? getLinksLoading,
     TResult Function(GetLinksResponse response)? getLinksSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -766,7 +736,7 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
     required TResult orElse(),
   }) {
     if (searchError != null) {
-      return searchError(apiErrorModel);
+      return searchError();
     }
     return orElse();
   }
@@ -831,16 +801,7 @@ class _$SearchErrorImpl with DiagnosticableTreeMixin implements SearchError {
 }
 
 abstract class SearchError implements SearchState {
-  const factory SearchError(final ApiErrorModel apiErrorModel) =
-      _$SearchErrorImpl;
-
-  ApiErrorModel get apiErrorModel;
-
-  /// Create a copy of SearchState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SearchErrorImplCopyWith<_$SearchErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory SearchError() = _$SearchErrorImpl;
 }
 
 /// @nodoc
@@ -895,7 +856,7 @@ class _$GetLinkLoadingImpl
     required TResult Function() initial,
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
-    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() searchError,
     required TResult Function() getLinksLoading,
     required TResult Function(GetLinksResponse response) getLinksSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
@@ -911,7 +872,7 @@ class _$GetLinkLoadingImpl
     TResult? Function()? initial,
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
-    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? searchError,
     TResult? Function()? getLinksLoading,
     TResult? Function(GetLinksResponse response)? getLinksSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -927,7 +888,7 @@ class _$GetLinkLoadingImpl
     TResult Function()? initial,
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
-    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? searchError,
     TResult Function()? getLinksLoading,
     TResult Function(GetLinksResponse response)? getLinksSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -1087,7 +1048,7 @@ class _$GetLinksSuccessImpl
     required TResult Function() initial,
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
-    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() searchError,
     required TResult Function() getLinksLoading,
     required TResult Function(GetLinksResponse response) getLinksSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
@@ -1103,7 +1064,7 @@ class _$GetLinksSuccessImpl
     TResult? Function()? initial,
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
-    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? searchError,
     TResult? Function()? getLinksLoading,
     TResult? Function(GetLinksResponse response)? getLinksSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -1119,7 +1080,7 @@ class _$GetLinksSuccessImpl
     TResult Function()? initial,
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
-    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? searchError,
     TResult Function()? getLinksLoading,
     TResult Function(GetLinksResponse response)? getLinksSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -1287,7 +1248,7 @@ class _$GetLinksErrorImpl
     required TResult Function() initial,
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
-    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() searchError,
     required TResult Function() getLinksLoading,
     required TResult Function(GetLinksResponse response) getLinksSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
@@ -1303,7 +1264,7 @@ class _$GetLinksErrorImpl
     TResult? Function()? initial,
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
-    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? searchError,
     TResult? Function()? getLinksLoading,
     TResult? Function(GetLinksResponse response)? getLinksSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -1319,7 +1280,7 @@ class _$GetLinksErrorImpl
     TResult Function()? initial,
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
-    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? searchError,
     TResult Function()? getLinksLoading,
     TResult Function(GetLinksResponse response)? getLinksSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -1462,7 +1423,7 @@ class _$ChangeTextFormFieldBasedOnVoiceLoadingImpl
     required TResult Function() initial,
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
-    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() searchError,
     required TResult Function() getLinksLoading,
     required TResult Function(GetLinksResponse response) getLinksSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
@@ -1478,7 +1439,7 @@ class _$ChangeTextFormFieldBasedOnVoiceLoadingImpl
     TResult? Function()? initial,
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
-    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? searchError,
     TResult? Function()? getLinksLoading,
     TResult? Function(GetLinksResponse response)? getLinksSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -1494,7 +1455,7 @@ class _$ChangeTextFormFieldBasedOnVoiceLoadingImpl
     TResult Function()? initial,
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
-    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? searchError,
     TResult Function()? getLinksLoading,
     TResult Function(GetLinksResponse response)? getLinksSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -1629,7 +1590,7 @@ class _$ChangeTextFormFieldBasedOnVoiceSuccessImpl
     required TResult Function() initial,
     required TResult Function() searchLoading,
     required TResult Function(SearchResponse response) searchSuccess,
-    required TResult Function(ApiErrorModel apiErrorModel) searchError,
+    required TResult Function() searchError,
     required TResult Function() getLinksLoading,
     required TResult Function(GetLinksResponse response) getLinksSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) getLinksError,
@@ -1645,7 +1606,7 @@ class _$ChangeTextFormFieldBasedOnVoiceSuccessImpl
     TResult? Function()? initial,
     TResult? Function()? searchLoading,
     TResult? Function(SearchResponse response)? searchSuccess,
-    TResult? Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult? Function()? searchError,
     TResult? Function()? getLinksLoading,
     TResult? Function(GetLinksResponse response)? getLinksSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? getLinksError,
@@ -1661,7 +1622,7 @@ class _$ChangeTextFormFieldBasedOnVoiceSuccessImpl
     TResult Function()? initial,
     TResult Function()? searchLoading,
     TResult Function(SearchResponse response)? searchSuccess,
-    TResult Function(ApiErrorModel apiErrorModel)? searchError,
+    TResult Function()? searchError,
     TResult Function()? getLinksLoading,
     TResult Function(GetLinksResponse response)? getLinksSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? getLinksError,

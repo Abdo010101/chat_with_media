@@ -23,7 +23,7 @@ class SearchCubit extends Cubit<SearchState> {
     response.when(success: (sresponse) {
       emit(SearchState.searchSuccess(sresponse));
     }, failure: (apiErrorModel) {
-      emit(SearchState.searchError(apiErrorModel));
+      emit(SearchState.searchError());
     });
   }
   //******************************************************************************************************** */

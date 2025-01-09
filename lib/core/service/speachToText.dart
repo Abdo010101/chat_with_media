@@ -12,6 +12,7 @@ class SpeechToTextService {
   bool _speechEnabled = false;
   static String recognizedWords = '';
   static bool isFinalResult = false;
+  static ValueNotifier<String> recognizedWordsNotifier = ValueNotifier('');
 
   static void initSpeech() async {
     bool _speechEnabled = await _speechToText.initialize();
@@ -28,15 +29,16 @@ class SpeechToTextService {
 
   static void _onSpeechResult(SpeechRecognitionResult result) {
     log(isFinalResult.toString());
+    recognizedWordsNotifier.value = result.recognizedWords;
     log('isFinalResult');
     isFinalResult = false;
     recognizedWords = result.recognizedWords;
 
     isFinalResultWords(result: result);
 
-    if (isFinalResult) {
-      TextToSpeechService.speak(text: "Speak");
-    }
+    // if (isFinalResult) {
+    //   TextToSpeechService.speak(text: "Speak");
+    // }
   }
 
   static void isFinalResultWords({required SpeechRecognitionResult result}) {
@@ -45,6 +47,8 @@ class SpeechToTextService {
       print(recognizedWords);
 
       print('object');
+      recognizedWordsNotifier.value = result.recognizedWords;
+
       isFinalResult = true;
     } else {
       isFinalResult = false;

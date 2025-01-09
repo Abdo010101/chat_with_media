@@ -10,10 +10,10 @@ class BlocBuilderSearchResult extends StatelessWidget {
   final double textSize;
   @override
   Widget build(BuildContext context) {
-    return searchState.maybeWhen(searchError: (apiErrorModel) {
+    return searchState.maybeWhen(searchError: () {
       return Center(
         child: Text(
-          apiErrorModel.message ?? "SomeThing went Wrong .. please try again ",
+          "SomeThing went Wrong .. please try again ",
           style: TextStyles.font14BlueSemiBold.copyWith(color: Colors.red),
         ),
       );
